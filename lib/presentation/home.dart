@@ -209,6 +209,9 @@ class _HomePageState extends State<HomePage> {
 
   void _onPageChanged(focusedDay) {
     setState(() {
+      _isLoading = true;
+    });
+    setState(() {
       _future = _controller.getReport(focusedDay.month).then((value) {
         _foodDelivery = value;
         _isLoading = false;
@@ -220,6 +223,7 @@ class _HomePageState extends State<HomePage> {
     });
     setState(() {
       _focusedDay = focusedDay;
+      _isLoading = true;
     });
   }
 }
