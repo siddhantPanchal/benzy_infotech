@@ -223,7 +223,7 @@ class _HomePageState extends State<HomePage> {
     });
     setState(() {
       _focusedDay = focusedDay;
-      _isLoading = true;
+      _isLoading = false;
     });
   }
 }
